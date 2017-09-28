@@ -1,0 +1,14 @@
+.backcolor{
+  background-color: #c8d1c7;
+  border-radius: 5px;
+  padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: rgb(255, 255, 255);
+}
+
+.backcolor:hover{
+  background-color: #a8b1a7;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.backcolor{
+background-color:  #CEECEF;
+border-radius: 7px;
+}
+
+.labelStyle{
+  color:rgb(255, 255, 255);
+}
+
+.orderStyle{
+  font-size: 30px;
+  color:rgb(255, 255, 255);
+  padding-bottom: 15px;
+}
+
+.spaces{
+  padding-top:30px;
+  padding-bottom: 30px;
+}

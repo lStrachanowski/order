@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-xs-12  backcolor">
+    <div class="col-xs-12 form-group">
+      <label>Firma</label>
+      <input type="text" class="form-control" [(ngModel)]="companyInput" />
+    </div>
+    <div class="col-xs-6 form-group">
+      <label>Załadunek</label>
+      <input type="text" class="form-control" [(ngModel)]="loadingPlaceInput" />
+    </div>
+
+    <div class="col-xs-6 form-group">
+      <label>Rozładunek</label>
+      <input type="text" class="form-control" [(ngModel)]="deliveryInput" />
+    </div>
+
+    <div class="col-xs-12">
+      <div class="col-xs-3 form-group">
+        <label>Fracht</label>
+        <input type="number" class="form-control" [(ngModel)]="frachtRateInput" />
+      </div>
+
+      <div class="col-xs-3 form-group">
+        <label>Stawka</label>
+        <input type="number" class="form-control" [(ngModel)]="carrierRateInput" />
+      </div>
+
+      <div class="col-xs-6 form-group">
+        <label>Zysk</label>
+        <div class="profit" [ngClass]="{'profitGreen':difference>0, 'profitRed':difference<0}">
+          {{difference}}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-12">
+      <div class="col-xs-6 form-group text-center">
+        <button class="btn btn-block btn-success" type="submit" (click)="addOrderFunction()">Add order</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

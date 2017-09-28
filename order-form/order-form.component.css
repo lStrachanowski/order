@@ -1,0 +1,18 @@
+.profit{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.backcolor{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: #FFC52C;
+}
+
+.profitGreen{
+  color: green;
+}
+
+.profitRed{
+  color: red;
+}
