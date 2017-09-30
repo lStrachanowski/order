@@ -6,6 +6,8 @@ import { ButtonPanelComponent } from './button-panel/button-panel.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { OrderItemComponent } from './order-item/order-item.component';
 import { DisplayComponent } from './display/display.component';
+import { BackcolorDirective } from './backcolor.directive';
+import { FontsizeDirective } from './fontsize.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { DisplayComponent } from './display/display.component';
     ButtonPanelComponent,
     OrderFormComponent,
     OrderItemComponent,
-    DisplayComponent
+    DisplayComponent,
+    BackcolorDirective,
+    FontsizeDirective
 
   ],
   imports: [

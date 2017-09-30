@@ -1,37 +1,37 @@
-<div class="backcolor col-xs-12">
-  <div class="col-xs-12 orderStyle">
+<div class="backcolor col-xs-12" appBackcolor [bColor]="'red'">
+  <div class="col-xs-12 orderStyle" appFontsize>
     Zlecenie
   </div>
   <hr>
   <div class="spaces">
-    <div class="col-xs-2 labelStyle">
+    <div class="col-xs-2 labelStyle" appFontsize  [fSize]="'18px'">
       Firma:
     </div>
-    <div class="col-xs-10">
+    <div class="col-xs-10" appFontsize [fSize]="'22px'">
       {{displayContent.company}}
     </div>
   </div>
 
   <div class="spaces">
-    <div class="col-xs-2 labelStyle">
+    <div class="col-xs-2 labelStyle" appFontsize [fSize]="'18px'">
       Trasa:
     </div>
-    <div class="col-xs-5">
+    <div class="col-xs-5" appFontsize [fSize]="'22px'">
       {{displayContent.loadingPlace}}
     </div>
-    <div class="col-xs-5">
+    <div class="col-xs-5" appFontsize [fSize]="'22px'">
       {{displayContent.deliveryPlace}}
     </div>
   </div>
 
   <div class="spaces">
-    <div class="col-xs-2 labelStyle">
+    <div class="col-xs-2 labelStyle" appFontsize [fSize]="'18px'">
       Stawki:
     </div>
-    <div class="col-xs-5">
+    <div class="col-xs-5" appFontsize [fSize]="'20px'">
       {{displayContent.frachtRate}}
     </div>
-    <div class="col-xs-5">
+    <div class="col-xs-5" appFontsize [fSize]="'20px'">
       {{displayContent.carrierRate}}
     </div>
   </div>
