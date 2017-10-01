@@ -7,7 +7,7 @@
     <div class="row col-xs-6">
           <app-button-panel (status)="showHide($event)"></app-button-panel>
           <app-order-form (outData)="pushData($event)" *ngIf="showForm"></app-order-form>
-          <app-order-item *ngFor="let order of ordersArr" [orderListArr]="order" (click)="displayData(order)"></app-order-item>
+          <app-order-item *ngFor="let order of ordersArr; let i = index" [orderListArr]="order" (click)="displayData(order)"></app-order-item>
     </div>
     <div class="col-xs-offset-1 col-xs-5">
       <app-display [displayContent]="currOrder"></app-display>

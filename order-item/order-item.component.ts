@@ -1,5 +1,6 @@
 import { Component, OnInit,Input} from '@angular/core';
 import {Order} from '../order.model';
+import {OrderDataService} from '../shared/orderData.service';
 
 @Component({
   selector: 'app-order-item',
@@ -7,11 +8,16 @@ import {Order} from '../order.model';
   styleUrls: ['./order-item.component.css']
 })
 export class OrderItemComponent implements OnInit {
-@Input() orderListArr : {company:string,loadingPlace:string,deliveryPlace:string,frachtRate:number,carrierRate:number};
+@Input() orderListArr : {orderNumber:number,company:string,loadingPlace:string,deliveryPlace:string,frachtRate:number,carrierRate:number};
 
-  constructor() { }
+  constructor(private orderData:OrderDataService) { }
 
   ngOnInit() {
+  }
+
+  delOrder(id:number){
+    console.log(id);
+    this.orderData.deleteOrder(id);
   }
 
 

@@ -8,6 +8,7 @@ import { OrderItemComponent } from './order-item/order-item.component';
 import { DisplayComponent } from './display/display.component';
 import { BackcolorDirective } from './backcolor.directive';
 import { FontsizeDirective } from './fontsize.directive';
+import {OrderDataService} from './shared/orderData.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FontsizeDirective } from './fontsize.directive';
     BrowserModule,
       FormsModule
   ],
-  providers: [],
+  providers: [OrderDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

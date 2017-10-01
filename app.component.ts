@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Order } from './order.model';
+import {OrderDataService} from './shared/orderData.service';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,12 @@ export class AppComponent {
   currOrder: Order;
   showForm: boolean = false;
 
-  constructor() {
-    this.ordersArr = [new Order("DSV", "Katowice", "Madryt", 2500, 2000),
-    new Order("Schenker", "Hamburg", "Rome", 1750, 1650)];
+  constructor(private orderData:OrderDataService) {
+    this.ordersArr = this.orderData.orderlist;
   }
 
   pushData(inData: Order) {
-    this.ordersArr.push(inData);
+    this.orderData.addOrder(inData);
   }
 
   displayData(order: Order) {

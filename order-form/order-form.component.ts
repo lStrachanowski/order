@@ -1,30 +1,29 @@
-import { Component, OnInit,AfterContentChecked,Output,EventEmitter } from '@angular/core';
+import { Component,AfterContentChecked} from '@angular/core';
 import{Order} from '../order.model';
+import {OrderDataService} from '../shared/orderData.service';
 
 @Component({
   selector: 'app-order-form',
   templateUrl: './order-form.component.html',
   styleUrls: ['./order-form.component.css']
 })
-export class OrderFormComponent implements OnInit,AfterContentChecked{
+export class OrderFormComponent implements AfterContentChecked{
+
   companyInput: string;
   loadingPlaceInput: string;
   deliveryInput: string;
   frachtRateInput: number=0;
   carrierRateInput: number =0;
   difference : number ;
-  @Output() outData = new EventEmitter<Order>();
-  constructor() { }
 
-  ngOnInit() {
-  }
+  constructor(private orderData:OrderDataService) { }
 
   ngAfterContentChecked(){
     this.difference = this.frachtRateInput-this.carrierRateInput;
   }
 
   addOrderFunction() {
-    let newOrder = new Order(this.companyInput,this.loadingPlaceInput,this.deliveryInput,this.frachtRateInput,this.carrierRateInput);
-    this.outData.emit(newOrder);
+    let newOrder = new Order(this.orderData.orderCount(),this.companyInput,this.loadingPlaceInput,this.deliveryInput,this.frachtRateInput,this.carrierRateInput);
+    this.orderData.addOrder(newOrder);
   }
 }

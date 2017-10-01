@@ -15,7 +15,7 @@ export class DisplayComponent implements OnInit {
 
   ngAfterContentChecked(){
     if(this.displayContent === undefined){
-      this.displayContent = {company:"click on list",loadingPlace:"click on list",deliveryPlace:"click on list",frachtRate:0,carrierRate:0};
+      this.displayContent = {orderNumber:0,company:"click on list",loadingPlace:"click on list",deliveryPlace:"click on list",frachtRate:0,carrierRate:0};
     }
   }
 
