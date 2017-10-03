@@ -1,0 +1,11 @@
+.backColor{
+  background-color: rgb(217, 211, 221);
+  border-radius: 7px;
+  margin: 2%;
+  padding: 2%;
+}
+
+.fontStyle{
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}

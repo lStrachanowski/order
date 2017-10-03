@@ -9,6 +9,7 @@ import { DisplayComponent } from './display/display.component';
 import { BackcolorDirective } from './backcolor.directive';
 import { FontsizeDirective } from './fontsize.directive';
 import {OrderDataService} from './shared/orderData.service';
+import { AccountingComponent } from './accounting/accounting.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {OrderDataService} from './shared/orderData.service';
     OrderItemComponent,
     DisplayComponent,
     BackcolorDirective,
-    FontsizeDirective
+    FontsizeDirective,
+    AccountingComponent
 
   ],
   imports: [
